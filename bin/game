@@ -1,15 +1,16 @@
 #!/usr/bin/env nodejs
 'use strict';
 
-let readlineSync = require('readline-sync');
-let answer;
+const readlineSync = require('readline-sync');
+const command = require('../lib/command')
+let inputText;
 
 while (true) {
-    answer = readlineSync.question('Mondj valamit kerlek:\t');
-    if (quit()) break;
-    console.log('retyetye');
+    inputText = readlineSync.question('>> ');
+    if (quit(inputText)) break;
+    command(inputText);
 }
 
-function quit(answer) {
-    return answer == 'kilépés'
+function quit(inputText) {
+    return inputText == 'kilépés'
 }
