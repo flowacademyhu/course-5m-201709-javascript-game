@@ -14,3 +14,7 @@ while (true) {
 function quit(inputText) {
     return inputText == 'kilépés'
 }
+
+let context = {
+
+};
