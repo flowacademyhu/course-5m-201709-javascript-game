@@ -2,7 +2,7 @@
 const road = require('./game-field/road');
 
 
-module.exports = function buildMap(){
+module.exports = ()=>{
     let matrix= [];
     for(let i=0 ; i<10 ; i++){
         matrix[i] = [];
