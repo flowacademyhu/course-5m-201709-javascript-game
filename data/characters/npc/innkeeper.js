@@ -6,6 +6,6 @@ module.exports = {
     str: 5,
     int: 3,
     agi: 4,
-    items: 'Coffee',
+    items: ['Coffee'],
     aggro: false
 };
