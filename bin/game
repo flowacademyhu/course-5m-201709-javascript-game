@@ -2,13 +2,11 @@
 'use strict';
 
 const readlineSync = require('readline-sync');
-const command = require('../lib/command')
-let inputText;
+const inputText = require('../lib/input')
 
 while (true) {
-    inputText = readlineSync.question('>> ');
-    if (quit(inputText)) break;
-    command(inputText);
+    inputText(readlineSync.question('>> '));
+    if (quit(inputText())) break;
 }
 
 function quit(inputText) {
