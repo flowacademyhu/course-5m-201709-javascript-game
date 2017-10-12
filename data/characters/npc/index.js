@@ -1,15 +1,10 @@
 'use strict';
-const axeRobber = require('./axe-robber');
-const coboldThief = require('./cobold-thief');
-const drunkenBeggar = require('./drunken-beggar');
-const drunkenWizzard = require('./drunken-wizzard');
-const innKeeper = require('./innkeeper');
-const wildBoar = require('./wild-boar')
+const files = './';
+const fs = require('fs');
+let npcs = fs.readdirSync(files)
+    .filter(file => file !== 'index.js')
+    .map(file => require('./' + file))
+    .map(obj => obj.name)
 
-let npcs = [axeRobber,coboldThief,drunkenBeggar,drunkenWizzard,innKeeper,wildBoar];
-let npcList = [];
-let i;
-for(i = 0; i<npcs.length; i++) {
-      npcList.push(npcs[i].name);
-}
-console.log(npcList);
+console.log(npcs)
+module.exports = npcs;
