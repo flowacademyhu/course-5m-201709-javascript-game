@@ -14,6 +14,34 @@ function gameWin (position) {
   }
 }
 
+function matrixCurrentPosition (coordOne, coordTwo, matrix, gameArea) {
+  console.log(gameArea[matrix[coordOne][coordTwo]].desc);
+
+  if (matrixEdgeCheck(coordTwo, coordOne - 1, matrix)) {
+    console.log('Tőled északra ' + gameArea[matrix[coordOne - 1][coordTwo]].shortDesc);
+  } else {
+    console.log('Tőled északra piciny világod szélét látod, a leesés fenyeget! JUJJUJ');
+  }
+
+  if (matrixEdgeCheck(coordTwo, coordOne + 1, matrix)) {
+    console.log('Tőled délre ' + gameArea[matrix[coordOne + 1][coordTwo]].shortDesc);
+  } else {
+    console.log('Tőled délre piciny világod szélét látod, a leesés fenyeget! JUJJUJ');
+  }
+
+  if (matrixEdgeCheck(coordTwo + 1, coordOne, matrix)) {
+    console.log('Tőled keletre ' + gameArea[matrix[coordOne][coordTwo + 1]].shortDesc);
+  } else {
+    console.log('Tőled keletre piciny világod szélét látod, a leesés fenyeget! JUJJUJ');
+  }
+
+  if (matrixEdgeCheck(coordTwo - 1, coordOne, matrix)) {
+    console.log('Tőled nyugatra ' + gameArea[matrix[coordOne][coordTwo - 1]].shortDesc);
+  } else {
+    console.log('Tőled nyugatra piciny világod szélét látod, a leesés fenyeget! JUJJUJ');
+  }
+}
+
 function matrixEdgeCheck (x, y, matrix) {
   if (typeof matrix[x] === 'object' && typeof matrix[y] === 'object') {
     return true;
@@ -33,7 +61,7 @@ function map () {
       n++;
     }
   }
-  console.log(matrix);
+  matrixCurrentPosition(position[1], position[0], matrix, gameArea);
   return matrix;
 }
 
@@ -66,32 +94,7 @@ function go (direction) {
   } else {
     console.log('Erre nem lehet menni.');
   }
-
-  console.log(gameArea[matrix[position[1]][position[0]]].desc);
-
-  if (matrixEdgeCheck(position[0], position[1] - 1, matrix)) {
-    console.log('Tőled északra ' + gameArea[matrix[position[1] - 1][position[0]]].shortDesc);
-  } else {
-    console.log('Tőled északra piciny világod szélét látod, a leesés fenyeget! JUJJUJ');
-  }
-
-  if (matrixEdgeCheck(position[0], position[1] + 1, matrix)) {
-    console.log('Tőled délre ' + gameArea[matrix[position[1] + 1][position[0]]].shortDesc);
-  } else {
-    console.log('Tőled délre piciny világod szélét látod, a leesés fenyeget! JUJJUJ');
-  }
-
-  if (matrixEdgeCheck(position[0] + 1, position[1], matrix)) {
-    console.log('Tőled keletre ' + gameArea[matrix[position[1]][position[0] + 1]].shortDesc);
-  } else {
-    console.log('Tőled keletre piciny világod szélét látod, a leesés fenyeget! JUJJUJ');
-  }
-
-  if (matrixEdgeCheck(position[0] - 1, position[1], matrix)) {
-    console.log('Tőled nyugatra ' + gameArea[matrix[position[1]][position[0] - 1]].shortDesc);
-  } else {
-    console.log('Tőled nyugatra piciny világod szélét látod, a leesés fenyeget! JUJJUJ');
-  }
+  matrixCurrentPosition(position[1], position[0], matrix, gameArea);
 }
 
 // init map
