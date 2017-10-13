@@ -31,30 +31,31 @@ function map () {
 }
 
 function go (direction) {
-  let currentPosition = [position[0], position[1]];
+  let coordOne = position[1];
+  let coordTwo = position[0];
 
   switch (direction) {
     case 'kelet':
-      currentPosition[0] += 1;
+      coordTwo++;
       break;
     case 'nyugat':
-      currentPosition[0] -= 1;
+      coordTwo--;
       break;
     case 'észak':
-      currentPosition[1] -= 1;
+      coordOne--;
       break;
     case 'dél':
-      currentPosition[1] += 1;
+      coordOne++;
       break;
     default:
       console.log('Merre?');
   }
 
-  if (typeof matrix[currentPosition[0]] === 'object' &&
-      typeof matrix[currentPosition[1]] === 'object' &&
-      gameArea[matrix[currentPosition[1]][currentPosition[0]]].accessible) {
-    position[0] = currentPosition[0];
-    position[1] = currentPosition[1];
+  if (typeof matrix[coordTwo] === 'object' &&
+      typeof matrix[coordOne] === 'object' &&
+      gameArea[matrix[coordOne][coordTwo]].accessible) {
+    position[0] = coordTwo;
+    position[1] = coordOne;
   } else {
     console.log('Erre nem lehet menni.');
   }
