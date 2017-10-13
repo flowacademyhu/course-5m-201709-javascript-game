@@ -1,70 +1,69 @@
 #!/usr/bin/env nodejs
 'use strict';
-
+const road = require('../data/game-area/game-field/road');
 const read = require('readline-sync');
+
 let gameIsRunning = true;
 // x es y koordinata
 let position = [0, 0];
 
 let map = function () {
-    let matrix = [];
-    let n = 0;
+  let matrix = [];
 
-    for(let i = 0 ; i < 10 ; i++) {
-        matrix[i] = [];
-        for(let j = 0 ; j < 10; j++ ){
-            matrix[i][j] = n;
-            n++;
-        }
+  for (let i = 0; i < 10; i++) {
+    matrix[i] = [];
+    for (let j = 0; j < 10; j++) {
+      matrix[i][j] = (road);
     }
-    console.log(matrix);
-    return matrix;
-}
+  }
+  console.log(matrix);
+  return matrix;
+};
 
 let go = function (direction) {
-    let currentPosition = [position[0], position[1]];
+  let currentPosition = [position[0], position[1]];
 
-    switch(direction) {
-        case 'kelet':
-            currentPosition[0] === 0 ? currentPosition[0] : currentPosition[0]+= 1;
-            break;
-        case 'nyugat':
-            currentPosition[0] -= 1;
-            break;
-        case 'észak':
-            currentPosition[1] -= 1;
-            break;
-        case 'dél': 
-            currentPosition[1] += 1;
-            break;
-        default:
-            console.log('Merre?');        
-    }
+  switch (direction) {
+    case 'kelet':
+      currentPosition[0] === 0 ? currentPosition[0] : currentPosition[0] += 1;
+      break;
+    case 'nyugat':
+      currentPosition[0] -= 1;
+      break;
+    case 'észak':
+      currentPosition[1] -= 1;
+      break;
+    case 'dél':
+      currentPosition[1] += 1;
+      break;
+    default:
+      console.log('Merre?');
+  }
 
-    if (typeof matrix[currentPosition[0]] === 'object' &&
+  if (typeof matrix[currentPosition[0]] === 'object' &&
         typeof matrix[currentPosition[1]] === 'object') {
-        position[0] = currentPosition[0];
-        position[1] = currentPosition[1];
-    }
+    position[0] = currentPosition[0];
+    position[1] = currentPosition[1];
+  }
 
-    console.log(matrix[position[1]][position[0]]);
-}
+  console.log(matrix[position[1]][position[0]]);
+};
 
 // init map
 let matrix = map();
 
 while (gameIsRunning) {
-    const input = read.question('>>');
-    const splittedText = input.split(' ');
+  const input = read.question('>>');
+  const splittedText = input.split(' ');
 
-    switch(splittedText[0]) {
-        case 'kilépés':
-            gameIsRunning = false;
-            break;
-        case 'menj':
-            go(splittedText[1]);
-            break;
-        default:
-            console.log('Tanulj meg magyarul!');
-    }
+  switch (splittedText[0]) {
+    case 'kilépés':
+      gameIsRunning = false;
+      break;
+    case 'menj':
+      go(splittedText[1]);
+      break;
+    default:
+      console.log('Tanulj meg magyarul!');
+  }
 }

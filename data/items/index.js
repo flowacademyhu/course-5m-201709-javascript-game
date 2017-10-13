@@ -4,7 +4,7 @@ const fs = require('fs');
 let x = fs.readdirSync(item)
     .filter(file => file !== 'index.js')
     .map(file => require('./' + file))
-    .map(obj => obj.name)
+    .map(obj => obj.name);
 
-console.log(x)
+console.log(x);
 module.exports = x;
