@@ -54,6 +54,8 @@ function go (direction) {
         typeof matrix[currentPosition[1]] === 'object') {
     position[0] = currentPosition[0];
     position[1] = currentPosition[1];
+  } else {
+    console.log('Erre nem lehet menni');
   }
 
   console.log(gameArea[matrix[position[1]][position[0]]].desc);
