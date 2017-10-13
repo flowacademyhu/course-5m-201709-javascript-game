@@ -1,19 +1,21 @@
 #!/usr/bin/env nodejs
 'use strict';
-const road = require('../data/game-area/game-field/road');
+const gameArea = require('../data/game-area/game-field/index');
 const read = require('readline-sync');
 
 let gameIsRunning = true;
 // x es y koordinata
-let position = [0, 0];
+let position = [0, 9];
 
 let map = function () {
   let matrix = [];
+  let n = 0;
 
   for (let i = 0; i < 10; i++) {
     matrix[i] = [];
     for (let j = 0; j < 10; j++) {
-      matrix[i][j] = (road);
+      matrix[i][j] = n;
+      n++;
     }
   }
   console.log(matrix);
@@ -25,7 +27,7 @@ let go = function (direction) {
 
   switch (direction) {
     case 'kelet':
-      currentPosition[0] === 0 ? currentPosition[0] : currentPosition[0] += 1;
+      currentPosition[0] += 1;
       break;
     case 'nyugat':
       currentPosition[0] -= 1;
@@ -46,7 +48,7 @@ let go = function (direction) {
     position[1] = currentPosition[1];
   }
 
-  console.log(matrix[position[1]][position[0]]);
+  console.log(gameArea[matrix[position[1]][position[0]]]);
 };
 
 // init map
