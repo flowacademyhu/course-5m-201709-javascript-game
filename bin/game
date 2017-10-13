@@ -5,7 +5,7 @@ const read = require('readline-sync');
 
 let gameIsRunning = true;
 // x es y koordinata
-let position = [5, 5];
+let position = [0, 9];
 
 function gameWin (position) {
   if (position[0] === 5 && position[1] === 4) {
@@ -16,6 +16,7 @@ function gameWin (position) {
 
 function matrixCurrentPosition (coordOne, coordTwo, matrix, gameArea) {
   console.log(gameArea[matrix[coordOne][coordTwo]].desc);
+  console.log('--------------------------------------');
 
   if (matrixEdgeCheck(coordTwo, coordOne - 1, matrix)) {
     console.log('Tőled északra ' + gameArea[matrix[coordOne - 1][coordTwo]].shortDesc);
@@ -103,6 +104,7 @@ let matrix = map();
 while (gameIsRunning) {
   const input = read.question('>>');
   const splittedText = input.split(' ');
+  console.log('--------------------------------------');
 
   switch (splittedText[0]) {
     case 'kilépés':
