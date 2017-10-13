@@ -55,7 +55,7 @@ function go (direction) {
     position[0] = currentPosition[0];
     position[1] = currentPosition[1];
   } else {
-    console.log('Erre nem lehet menni');
+    console.log('Erre nem lehet menni.');
   }
 
   console.log(gameArea[matrix[position[1]][position[0]]].desc);
@@ -72,14 +72,14 @@ function go (direction) {
     console.log('Tőled délre piciny világod szélét látod, a leesés fenyeget! JUJJUJ');
   }
 
-  if (matrixEdgeCheck(position[0] - 1, position[1], matrix)) {
-    console.log('Tőled keletre ' + gameArea[matrix[position[1]][position[0] - 1]].shortDesc);
+  if (matrixEdgeCheck(position[0] + 1, position[1], matrix)) {
+    console.log('Tőled keletre ' + gameArea[matrix[position[1]][position[0] + 1]].shortDesc);
   } else {
     console.log('Tőled keletre piciny világod szélét látod, a leesés fenyeget! JUJJUJ');
   }
 
-  if (matrixEdgeCheck(position[0] + 1, position[1], matrix)) {
-    console.log('Tőled nyugatra ' + gameArea[matrix[position[1]][position[0] + 1]].shortDesc);
+  if (matrixEdgeCheck(position[0] - 1, position[1], matrix)) {
+    console.log('Tőled nyugatra ' + gameArea[matrix[position[1]][position[0] - 1]].shortDesc);
   } else {
     console.log('Tőled nyugatra piciny világod szélét látod, a leesés fenyeget! JUJJUJ');
   }
