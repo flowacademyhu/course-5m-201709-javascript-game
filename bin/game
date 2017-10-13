@@ -5,7 +5,14 @@ const read = require('readline-sync');
 
 let gameIsRunning = true;
 // x es y koordinata
-let position = [0, 9];
+let position = [5, 5];
+
+function gameWin (position) {
+  if (position[0] === 5 && position[1] === 4) {
+    console.log('Nyeréé! Ügyes vagy!');
+    gameIsRunning = false;
+  }
+}
 
 function matrixEdgeCheck (x, y, matrix) {
   if (typeof matrix[x] === 'object' && typeof matrix[y] === 'object') {
@@ -104,4 +111,5 @@ while (gameIsRunning) {
     default:
       console.log('Tanulj meg magyarul!');
   }
+  gameWin(position);
 }
