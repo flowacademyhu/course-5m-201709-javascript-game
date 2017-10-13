@@ -51,7 +51,8 @@ function go (direction) {
   }
 
   if (typeof matrix[currentPosition[0]] === 'object' &&
-        typeof matrix[currentPosition[1]] === 'object') {
+      typeof matrix[currentPosition[1]] === 'object' &&
+      gameArea[matrix[currentPosition[1]][currentPosition[0]]].accessible) {
     position[0] = currentPosition[0];
     position[1] = currentPosition[1];
   } else {
