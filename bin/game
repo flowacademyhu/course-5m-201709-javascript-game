@@ -3,6 +3,8 @@
 const gameArea = require('../data/game-area/game-field/index');
 const read = require('readline-sync');
 const position = require('../data/game-area/starter-position');
+const matrixCurrentPosition = require('../data/game-area/matrix-current-position');
+const map = require('../data/game-area/index');
 
 let gameIsRunning = true;
 
@@ -11,58 +13,6 @@ function gameWin (position) {
     console.log('Nyeréé! Ügyes vagy!');
     gameIsRunning = false;
   }
-}
-
-function matrixCurrentPosition (coordOne, coordTwo, matrix, gameArea) {
-  console.log(gameArea[matrix[coordOne][coordTwo]].desc);
-  console.log('--------------------------------------');
-
-  if (matrixEdgeCheck(coordTwo, coordOne - 1, matrix)) {
-    console.log('Tőled északra ' + gameArea[matrix[coordOne - 1][coordTwo]].shortDesc);
-  } else {
-    console.log('Tőled északra piciny világod szélét látod, a leesés fenyeget! JUJJUJ');
-  }
-
-  if (matrixEdgeCheck(coordTwo, coordOne + 1, matrix)) {
-    console.log('Tőled délre ' + gameArea[matrix[coordOne + 1][coordTwo]].shortDesc);
-  } else {
-    console.log('Tőled délre piciny világod szélét látod, a leesés fenyeget! JUJJUJ');
-  }
-
-  if (matrixEdgeCheck(coordTwo + 1, coordOne, matrix)) {
-    console.log('Tőled keletre ' + gameArea[matrix[coordOne][coordTwo + 1]].shortDesc);
-  } else {
-    console.log('Tőled keletre piciny világod szélét látod, a leesés fenyeget! JUJJUJ');
-  }
-
-  if (matrixEdgeCheck(coordTwo - 1, coordOne, matrix)) {
-    console.log('Tőled nyugatra ' + gameArea[matrix[coordOne][coordTwo - 1]].shortDesc);
-  } else {
-    console.log('Tőled nyugatra piciny világod szélét látod, a leesés fenyeget! JUJJUJ');
-  }
-}
-
-function matrixEdgeCheck (x, y, matrix) {
-  if (typeof matrix[x] === 'object' && typeof matrix[y] === 'object') {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-function map () {
-  let matrix = [];
-  let n = 0;
-
-  for (let i = 0; i < 10; i++) {
-    matrix[i] = [];
-    for (let j = 0; j < 10; j++) {
-      matrix[i][j] = n;
-      n++;
-    }
-  }
-  matrixCurrentPosition(position[1], position[0], matrix, gameArea);
-  return matrix;
 }
 
 function go (direction) {
