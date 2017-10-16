@@ -5,27 +5,22 @@ const read = require('readline-sync');
 const position = require('../data/game-area/starter-position');
 const map = require('../data/game-area/index');
 const movement = require('../lib/actions/movement');
+const gameWin = require('../lib/game-win');
 
 let gameIsRunning = true;
 
-function gameWin (position) {
-  if (position[0] === 5 && position[1] === 4) {
-    console.log('Nyeréé! Ügyes vagy!');
-    gameIsRunning = false;
-  }
-}
-
 // init map
 let matrix = map();
+let quit = true;
 
-while (gameIsRunning) {
+while (gameIsRunning && quit) {
   const input = read.question('>>');
   const splittedText = input.split(' ');
   console.log('--------------------------------------');
 
   switch (splittedText[0]) {
     case 'kilépés':
-      gameIsRunning = false;
+      quit = false;
       break;
     case 'menj':
       movement(splittedText[1], matrix);
@@ -33,5 +28,5 @@ while (gameIsRunning) {
     default:
       console.log('Tanulj meg magyarul!');
   }
-  gameWin(position);
+  gameIsRunning = gameWin(position);
 }
