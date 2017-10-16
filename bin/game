@@ -2,10 +2,9 @@
 'use strict';
 const gameArea = require('../data/game-area/game-field/index');
 const read = require('readline-sync');
+const position = require('../data/game-area/starter-position');
 
 let gameIsRunning = true;
-// x es y koordinata
-let position = [0, 9];
 
 function gameWin (position) {
   if (position[0] === 5 && position[1] === 4) {
