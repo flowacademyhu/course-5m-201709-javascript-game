@@ -1,11 +1,12 @@
 'use strict';
 
 module.exports = {
-  name: 'Részeg Varázsló',
+  name: 'varázsló',
   hp: 4,
   str: 1,
   int: 3,
   agi: 1,
   items: ['kopottVarazsbot'],
-  aggro: false
+  aggro: false,
+  text: 'Szia, kalandor, majd később dumalunk.'
 };

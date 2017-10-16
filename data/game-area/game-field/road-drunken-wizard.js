@@ -3,8 +3,8 @@
 const drunkenWizard = require('../../characters/npc/drunken-wizard');
 
 module.exports = {
-  desc: 'Egy poros úton állsz. Varázslós.',
-  shortDesc: 'látsz egy utat. Varázslós.',
-  npc: [drunkenWizard],
+  desc: 'Az úton egy láthatóan illuminált állapotban lévő varázsló botorkál. Beszélj vele.',
+  shortDesc: 'egy köpenyes alak sziluettjét látod az úton.',
+  npc: drunkenWizard,
   accessible: true
 };
