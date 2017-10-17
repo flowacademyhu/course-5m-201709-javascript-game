@@ -3,7 +3,7 @@
 const sharpTusk = require('../../items/sharp-tusk')
 
 module.exports = {
-  name: 'Vadkan',
+  name: 'vadkan',
   hp: 5,
   str: 2,
   int: 1,

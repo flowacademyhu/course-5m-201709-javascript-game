@@ -3,7 +3,7 @@
 const alcohol = require('../../items/alcohol');
 
 module.exports = {
-  name: 'Részeg koldus',
+  name: 'koldus',
   hp: 6,
   str: 2,
   int: 1,

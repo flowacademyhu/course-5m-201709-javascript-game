@@ -3,7 +3,7 @@
 const axe = require('../../items/axe');
 
 module.exports = {
-  name: 'Bárdos haramia',
+  name: 'haramia',
   hp: 20,
   str: 5,
   int: 1,
