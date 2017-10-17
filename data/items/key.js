@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = {
-  name: 'Véres fejsze',
+  name: 'Vártorony kulcsa',
   hp: 0,
-  str: 3,
+  str: 0,
   int: 0,
   agi: 0
 };
