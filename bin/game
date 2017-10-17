@@ -4,37 +4,18 @@
 const read = require('readline-sync');
 const position = require('../data/game-area/starter-position');
 const map = require('../data/game-area/index');
-const movement = require('../lib/actions/movement');
 const gameWin = require('../lib/game-win');
-const talk = require('../lib/actions/talk');
-const attack = require('../lib/actions/attack');
+const command = require('../lib/command');
+const context = require('../data/context');
 
-let gameIsRunning = true;
+/* let gameIsRunning = true; */
 
 // init map
 let matrix = map();
-let quit = true;
-
-while (gameIsRunning && quit) {
+while (context.gameState.gameIsRunning && context.gameState.quit) {
   const input = read.question('>>');
   const splittedText = input.split(' ');
   console.log('--------------------------------------');
-
-  switch (splittedText[0]) {
-    case 'kilépés':
-      quit = false;
-      break;
-    case 'menj':
-      movement(splittedText[1], matrix);
-      break;
-    case 'beszélj':
-      talk(splittedText[1], matrix);
-      break;
-    case 'támadj':
-      attack(splittedText[1], matrix);
-      break;
-    default:
-      console.log('Tanulj meg magyarul!');
-  }
-  gameIsRunning = gameWin(position);
+  command(splittedText, matrix);
+  context.gameState.gameIsRunning = gameWin(position);
 }
