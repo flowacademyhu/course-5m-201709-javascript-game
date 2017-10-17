@@ -7,6 +7,7 @@ const map = require('../data/game-area/index');
 const movement = require('../lib/actions/movement');
 const gameWin = require('../lib/game-win');
 const talk = require('../lib/actions/talk');
+const attack = require('../lib/actions/attack');
 
 let gameIsRunning = true;
 
@@ -28,6 +29,9 @@ while (gameIsRunning && quit) {
       break;
     case 'beszélj':
       talk(splittedText[1], matrix);
+      break;
+    case 'támadj':
+      attack(splittedText[1], matrix);
       break;
     default:
       console.log('Tanulj meg magyarul!');

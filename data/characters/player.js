@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = {
-  name: getName,
-  hp: 10 + (str * 2),
-  str: startStrenght,
-  int: startInt,
-  agi: startAgi
+  name: 'Pisti a kívánságszatyorból',
+  hp: 15,
+  str: 10,
+  int: 10,
+  agi: 10
 };
