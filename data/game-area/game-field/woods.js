@@ -3,6 +3,8 @@
 module.exports = {
   desc: 'Árnyas erdőben állsz, fölötted a zöld lombkoronák leple.',
   shortDesc: 'árnyékos erdőt látsz.',
-  npc: [],
+  deadNpcDesc: null,
+  npc: null,
+  item: null,
   accessible: true
 };

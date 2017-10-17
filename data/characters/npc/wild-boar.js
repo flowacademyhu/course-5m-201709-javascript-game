@@ -9,5 +9,6 @@ module.exports = {
   int: 1,
   agi: 2,
   items: sharpTusk,
-  aggro: true
+  aggro: true,
+  text: 'Röff-röff uííí-uííí... RÖFF!'
 };
