@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'Hegyes Agyar',
+  name: 'agyar',
   hp: 0,
   str: 2,
   int: 0,

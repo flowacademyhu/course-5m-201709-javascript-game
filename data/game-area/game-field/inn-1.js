@@ -3,7 +3,7 @@
 const innKeeper = require('../../characters/npc/innkeeper');
 
 module.exports = {
-  desc: 'A kocsma ezen része üres, csak a ' + '\x1b[32m' + 'pultos' + '\x1b[0m' +
+  desc: 'A kocsma ezen része üres, csak a ' + '\x1b[32m' + 'kocsmáros' + '\x1b[0m' +
   ' törölget egy poharat a pult mögött.',
   deadNpcDesc: 'A kocsma ezen résza üres, a pult mögött sem áll senki, csak a legyek halk zümmögését hallod.',
   shortDesc: 'a távolban egy ház körvonalait látod. Egy kocsma.',

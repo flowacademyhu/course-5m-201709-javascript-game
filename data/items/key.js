@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'Vártorony kulcsa',
+  name: 'kulcs',
   hp: 0,
   str: 0,
   int: 0,
