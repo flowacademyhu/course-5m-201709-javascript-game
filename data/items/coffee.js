@@ -1,7 +1,7 @@
 'use strict';
 // kávé
 module.exports = {
-  name: 'Kávé',
+  name: 'kávé',
   hp: 10,
   str: 0,
   int: 0,

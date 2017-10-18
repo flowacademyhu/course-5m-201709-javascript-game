@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'Kopott Varázsbot',
+  name: 'varázsbot',
   hp: 0,
   str: 0,
   int: 2,
