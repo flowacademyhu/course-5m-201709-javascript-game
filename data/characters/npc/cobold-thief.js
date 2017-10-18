@@ -3,7 +3,7 @@
 const knife = require('../../items/knife');
 
 module.exports = {
-  name: 'Kobold zsebtolvaj',
+  name: 'kobold',
   hp: 20,
   str: 1,
   int: 2,

@@ -3,7 +3,7 @@
 const princess = require('../../items/princess');
 
 module.exports = {
-  name: 'Süsü a sárkány',
+  name: 'sárkány',
   hp: 20,
   str: 5,
   int: 1,
