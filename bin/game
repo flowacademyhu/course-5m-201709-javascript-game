@@ -12,8 +12,10 @@ const context = require('../data/context');
 
 // init map
 let matrix = map();
+console.log('--------------------------------------');
+console.log('Ha az írányításhoz segítségre van szükséged írd be a "segíts" parancsot!');
 while (context.gameState.gameIsRunning && context.gameState.quit) {
-  
+
   const input = read.question('>>');
   const splittedText = input.split(' ');
   console.log('--------------------------------------');
