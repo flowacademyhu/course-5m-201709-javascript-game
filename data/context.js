@@ -3,6 +3,6 @@
 module.exports = {
   gameState: {
     quit: true,
-    gameIsRunning: true
+    gameIsRunning: true,
   }
 };
