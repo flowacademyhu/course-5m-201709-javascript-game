@@ -2,8 +2,13 @@
 
 const matrixEdgeCheck = require('./matrix-edge-check');
 
+
 module.exports = function matrixCurrentPosition (coordOne, coordTwo, matrix, gameArea) {
-  console.log(gameArea[matrix[coordOne][coordTwo]].desc);
+  if (gameArea[matrix[coordOne][coordTwo]].npc !== null && gameArea[matrix[coordOne][coordTwo]].npc.hp <= 0) {
+    console.log(gameArea[matrix[coordOne][coordTwo]].deadNpcDesc);
+  } else {
+    console.log(gameArea[matrix[coordOne][coordTwo]].desc);
+  }
   console.log('--------------------------------------');
 
   if (matrixEdgeCheck(coordTwo, coordOne - 1, matrix)) {
