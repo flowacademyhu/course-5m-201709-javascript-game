@@ -10,5 +10,5 @@ module.exports = {
   agi: 1,
   items: oldStaff,
   aggro: false,
-  text: 'Szia, kalandor, majd később dumalunk.'
+  text: 'HUKKemuttatokegycsiribá! Abrakapálinka!'
 };
