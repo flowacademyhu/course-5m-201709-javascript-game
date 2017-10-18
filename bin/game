@@ -13,6 +13,7 @@ const context = require('../data/context');
 // init map
 let matrix = map();
 while (context.gameState.gameIsRunning && context.gameState.quit) {
+  
   const input = read.question('>>');
   const splittedText = input.split(' ');
   console.log('--------------------------------------');
