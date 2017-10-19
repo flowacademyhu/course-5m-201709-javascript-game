@@ -2,8 +2,8 @@
 // kávé
 module.exports = {
   name: 'kávé',
-  hp: 10,
+  hp: 0,
   str: 0,
-  int: 0,
+  int: 5,
   agi: 0
 };
