@@ -4,8 +4,8 @@ const sharpTusk = require('../../items/sharp-tusk')
 
 module.exports = {
   name: 'vadkan',
-  hp: 5,
-  str: 2,
+  hp: 15,
+  str: 8,
   int: 1,
   agi: 2,
   items: sharpTusk,

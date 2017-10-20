@@ -1,13 +1,13 @@
 'use strict';
 
-const princess = require('../../items/princess');
+const kincs = require('../../items/tresure');
 
 module.exports = {
   name: 'sárkány',
   hp: 20,
-  str: 5,
+  str: 10,
   int: 1,
   agi: 2,
-  items: princess,
+  items: kincs,
   aggro: true
 };
