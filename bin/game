@@ -9,6 +9,7 @@ const command = require('../lib/command');
 const context = require('../data/context');
 const playerDead = require('../lib/player-dead');
 const player = require('../data/characters/player');
+const round = require('../lib/round');
 
 /* let gameIsRunning = true; */
 
@@ -23,4 +24,5 @@ while (context.gameState.gameIsRunning && context.gameState.quit) {
   command(splittedText, matrix);
   context.gameState.gameIsRunning = gameWin(position);
   context.gameState.gameIsRunning = playerDead(player.hp);
+  round.counter();
 }
