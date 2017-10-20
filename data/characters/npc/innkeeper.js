@@ -4,8 +4,8 @@ const coffee = require('../../items/coffee');
 
 module.exports = {
   name: 'kocsmáros',
-  hp: 16,
-  str: 5,
+  hp: 20,
+  str: 10,
   int: 3,
   agi: 4,
   items: coffee,
