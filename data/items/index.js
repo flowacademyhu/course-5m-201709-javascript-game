@@ -1,10 +1,9 @@
 'use strict';
-const item = './';
+const item = './data/items/';
 const fs = require('fs');
-let x = fs.readdirSync(item)
+let items = fs.readdirSync(item)
     .filter(file => file !== 'index.js')
     .map(file => require('./' + file))
     .map(obj => obj.name);
 
-console.log(x);
-module.exports = x;
+module.exports = items;

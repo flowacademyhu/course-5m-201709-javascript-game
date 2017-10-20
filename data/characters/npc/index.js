@@ -1,9 +1,8 @@
 'use strict';
-const files = './';
+const folder = './data/characters/npc/';
 const fs = require('fs');
-let npcs = fs.readdirSync(files)
+let npcs = fs.readdirSync(folder)
     .filter(file => file !== 'index.js')
     .map(file => require('./' + file));
 
-console.log(npcs);
 module.exports = npcs;

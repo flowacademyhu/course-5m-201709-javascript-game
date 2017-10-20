@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'Az enyhén túlsúlyos és viseletes királylány',
+  name: 'királylány',
   hp: 0,
   str: 0,
   int: 0,
