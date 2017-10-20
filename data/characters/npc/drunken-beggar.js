@@ -9,5 +9,6 @@ module.exports = {
   int: 1,
   agi: 1,
   items: alcohol,
-  aggro: false
+  aggro: false,
+  text: 'HUKK... vannegykissapród?'
 };
