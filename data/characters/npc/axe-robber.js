@@ -9,5 +9,6 @@ module.exports = {
   int: 1,
   agi: 2,
   items: axe,
-  aggro: true
+  aggro: true,
+  text: 'Azottan mani a zsebödben komám? Csengessed ide vagy kapol maflást!'
 };

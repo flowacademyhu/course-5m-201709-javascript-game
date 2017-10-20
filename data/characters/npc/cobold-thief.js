@@ -9,5 +9,6 @@ module.exports = {
   int: 2,
   agi: 3,
   items: knife,
-  aggro: true
+  aggro: true,
+  text: 'Ugamaga-csumaga! Aggyá péz vagy élet!'
 };

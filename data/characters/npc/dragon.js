@@ -9,5 +9,6 @@ module.exports = {
   int: 1,
   agi: 2,
   items: kincs,
-  aggro: true
+  aggro: true,
+  text: 'GRAARGGRGRAAARARAGGRRAAAA... KHHM-KHMMM... Bocsánat, csak egy hajszál szaladt a torkomra. De azért most megeszlek!'
 };
