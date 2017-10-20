@@ -9,13 +9,14 @@ const command = require('../lib/command');
 const context = require('../data/context');
 const playerDead = require('../lib/player-dead');
 const player = require('../data/characters/player');
-
+const prologue = require('../lib/prologue');
 /* let gameIsRunning = true; */
 
 // init map
-let matrix = map();
-console.log('--------------------------------------');
+
+prologue();
 console.log('Ha az írányításhoz segítségre van szükséged írd be a "segíts" parancsot!');
+let matrix = map();
 while (context.gameState.gameIsRunning && context.gameState.quit) {
   const input = read.question('>>');
   const splittedText = input.split(' ');
