@@ -9,10 +9,9 @@ const command = require('../lib/command');
 const context = require('../data/context');
 const playerDead = require('../lib/player-dead');
 const player = require('../data/characters/player');
+const round = require('../lib/round');
 const prologue = require('../lib/prologue');
-/* let gameIsRunning = true; */
 
-// init map
 
 prologue();
 console.log('Ha az írányításhoz segítségre van szükséged írd be a "segíts" parancsot!');
@@ -25,6 +24,5 @@ while (context.gameState.gameIsRunning && context.gameState.quit) {
   if (gameWin(position) === false || playerDead(player.hp) === false) {
     context.gameState.gameIsRunning = false;
   }
-  /* context.gameState.gameIsRunning = gameWin(position);
-  context.gameState.gameIsRunning = playerDead(player.hp); */
+  round.counter();
 }
