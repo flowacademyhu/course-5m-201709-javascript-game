@@ -2,16 +2,15 @@
 'use strict';
 
 const read = require('readline-sync');
-const position = require('../data/game-area/starter-position');
-const map = require('../data/game-area/index');
+const position = require('../app/models/game-area/starter-position');
+const map = require('../app/models/game-area/index');
 const gameWin = require('../lib/game-win');
 const command = require('../lib/command');
-const context = require('../data/context');
+const context = require('../app/models/context');
 const playerDead = require('../lib/player-dead');
-const player = require('../data/characters/player');
+const player = require('../app/models/characters/player');
 const round = require('../lib/round');
 const prologue = require('../lib/prologue');
-
 
 prologue();
 console.log('Ha az írányításhoz segítségre van szükséged írd be a "segíts" parancsot!');

@@ -1,5 +1,5 @@
 'use strict';
-const player = require('../../data/characters/player');
+const player = require('../../models/characters/player');
 
 let inventory = {
   activeItems: [],
