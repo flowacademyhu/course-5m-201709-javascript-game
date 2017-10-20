@@ -1,7 +1,7 @@
 'use strict';
 
-const gameArea = require('../../data/game-area/game-field/index');
-const position = require('../../data/game-area/starter-position');
+const gameArea = require('../../models/game-area/game-field/index');
+const position = require('../../models/game-area/starter-position');
 
 module.exports = function (npc, matrix) {
   let targetNpc = gameArea[matrix[position[1]][position[0]]].npc;

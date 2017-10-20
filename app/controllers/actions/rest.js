@@ -1,7 +1,7 @@
 'use strict';
 
-const player = require('../../data/characters/player');
-const round = require('../../lib/round');
+const player = require('../../models/characters/player');
+const round = require('../../../lib/round');
 
 module.exports = function (inValue) {
   let value = parseInt(inValue);
