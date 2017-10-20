@@ -10,19 +10,20 @@ const context = require('../data/context');
 const playerDead = require('../lib/player-dead');
 const player = require('../data/characters/player');
 const round = require('../lib/round');
+const prologue = require('../lib/prologue');
 
-/* let gameIsRunning = true; */
 
-// init map
-let matrix = map();
-console.log('--------------------------------------');
+prologue();
 console.log('Ha az írányításhoz segítségre van szükséged írd be a "segíts" parancsot!');
+let matrix = map();
 while (context.gameState.gameIsRunning && context.gameState.quit) {
   const input = read.question('>>');
   const splittedText = input.split(' ');
   console.log('--------------------------------------');
   command(splittedText, matrix);
-  context.gameState.gameIsRunning = gameWin(position);
-  context.gameState.gameIsRunning = playerDead(player.hp);
   round.counter();
+  if (gameWin(position) === false || playerDead(player.hp) === false) {
+    context.gameState.gameIsRunning = false;
+  }
+  
 }

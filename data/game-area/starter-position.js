@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = [3, 9];
+module.exports = [7, 0];

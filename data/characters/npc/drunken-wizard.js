@@ -4,7 +4,7 @@ const oldStaff = require('../../items/old-staff');
 
 module.exports = {
   name: 'varázsló',
-  hp: 4,
+  hp: 20,
   str: 1,
   int: 3,
   agi: 1,

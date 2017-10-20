@@ -5,7 +5,7 @@ const knife = require('../../items/knife');
 module.exports = {
   name: 'kobold',
   hp: 20,
-  str: 1,
+  str: 8,
   int: 2,
   agi: 3,
   items: knife,

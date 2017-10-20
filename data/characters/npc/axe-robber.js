@@ -4,7 +4,7 @@ const axe = require('../../items/axe');
 
 module.exports = {
   name: 'haramia',
-  hp: 20,
+  hp: 15,
   str: 5,
   int: 1,
   agi: 2,
