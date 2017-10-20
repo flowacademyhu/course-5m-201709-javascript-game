@@ -1,8 +1,8 @@
 'use strict';
 
-const matrixCurrentPosition = require('../../data/game-area/matrix-current-position');
-const gameArea = require('../../data/game-area/game-field/index');
-const position = require('../../data/game-area/starter-position');
+const matrixCurrentPosition = require('../../models/game-area/matrix-current-position');
+const gameArea = require('../../models/game-area/game-field/index');
+const position = require('../../models/game-area/starter-position');
 
 module.exports = function (direction, matrix) {
   let coordOne = position[1];
