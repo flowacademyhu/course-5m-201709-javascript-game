@@ -1,6 +1,6 @@
 'use strict';
 
-const key = require('../../items/key');
+const key = require('../../../items/misc/key');
 
 module.exports = {
   desc: 'A barlang nyirkos hűvös félhomályában botorkálsz. A földön megpillantasz egy csillogó ' + '\x1b[33m' +

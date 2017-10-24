@@ -1,6 +1,6 @@
 'use strict';
 
-const axeRobber = require('../../characters/npc/axe-robber');
+const axeRobber = require('../../../characters/npc/hostile/axe-robber');
 
 module.exports = {
   desc: 'Az úton hirtelen elédugrik egy jól megtermett ' + '\x1b[31m' + 'haramia' + '\x1b[0m' +

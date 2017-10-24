@@ -1,6 +1,6 @@
 'use strict';
 
-const axe = require('../../items/axe');
+const axe = require('../../../items/weapons/axe');
 
 module.exports = {
   name: 'haramia',

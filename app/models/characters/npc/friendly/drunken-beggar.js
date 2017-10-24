@@ -1,6 +1,6 @@
 'use strict';
 // részeg koldus
-const alcohol = require('../../items/alcohol');
+const alcohol = require('../../../items/consumables/alcohol');
 
 module.exports = {
   name: 'koldus',

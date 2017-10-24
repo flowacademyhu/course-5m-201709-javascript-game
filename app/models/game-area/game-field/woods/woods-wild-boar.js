@@ -1,6 +1,6 @@
 'use strict';
 
-const wildBoar = require('../../characters/npc/wild-boar');
+const wildBoar = require('../../../characters/npc/hostile/wild-boar');
 
 module.exports = {
   desc: 'Az árnyas erdő sűrűjében megpillantasz egy ' + '\x1b[31m' + 'vadkan' + '\x1b[0m' +

@@ -1,6 +1,6 @@
 'use strict';
 
-const dragon = require('../../characters/npc/dragon');
+const dragon = require('../../../characters/npc/hostile/dragon');
 
 module.exports = {
   desc: 'A várat a ' + '\x1b[31m' + 'sárkány' + '\x1b[0m' + ' morgása tölti be! Megpillantod ocsmány fizimiskáját a felhalmozott kincsek között, markában a szegény, enyhén megviselt királylánnyal!',

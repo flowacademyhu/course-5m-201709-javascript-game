@@ -1,6 +1,6 @@
 'use strict';
 
-const kincs = require('../../items/tresure');
+const kincs = require('../../../items/misc/tresure');
 
 module.exports = {
   name: 'sárkány',

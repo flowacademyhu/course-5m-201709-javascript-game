@@ -1,6 +1,6 @@
 'use strict';
 // kocsmáros
-const coffee = require('../../items/coffee');
+const coffee = require('../../../items/consumables/coffee');
 
 module.exports = {
   name: 'kocsmáros',
