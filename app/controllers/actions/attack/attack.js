@@ -1,6 +1,6 @@
 'use strict';
 
-const gameArea = require('../../../models/game-area/index');
+const gameArea = require('../../../models/game-area/game-field/index');
 const position = require('../../../models/game-area/starter-position');
 const player = require('../../../models/characters/player');
 const random = require('./random/random');
