@@ -1,6 +1,6 @@
 'use strict';
 
-const drunkenBeggar = require('../../characters/npc/drunken-beggar');
+const drunkenBeggar = require('../../../characters/npc/friendly/drunken-beggar');
 
 module.exports = {
   desc: 'A kocsma ezen részében csak egy láthatóan részeg ' + '\x1b[32m' + 'koldus' + '\x1b[0m' +

@@ -1,6 +1,6 @@
 'use strict';
 
-const sharpTusk = require('../../items/sharp-tusk')
+const sharpTusk = require('../../../items/weapons/sharp-tusk');
 
 module.exports = {
   name: 'vadkan',

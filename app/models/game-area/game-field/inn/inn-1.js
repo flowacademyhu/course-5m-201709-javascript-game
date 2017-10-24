@@ -1,6 +1,6 @@
 'use strict';
 
-const innKeeper = require('../../characters/npc/innkeeper');
+const innKeeper = require('../../../characters/npc/friendly/innkeeper');
 
 module.exports = {
   desc: 'A kocsma ezen része üres, csak a ' + '\x1b[32m' + 'kocsmáros' + '\x1b[0m' +

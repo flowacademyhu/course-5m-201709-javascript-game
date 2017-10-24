@@ -1,6 +1,6 @@
 'use strict';
 
-const oldStaff = require('../../items/old-staff');
+const oldStaff = require('../../../items/weapons/old-staff');
 
 module.exports = {
   name: 'varázsló',

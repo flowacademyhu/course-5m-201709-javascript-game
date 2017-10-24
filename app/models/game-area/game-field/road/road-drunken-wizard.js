@@ -1,6 +1,6 @@
 'use strict';
 
-const drunkenWizard = require('../../characters/npc/drunken-wizard');
+const drunkenWizard = require('../../../characters/npc/friendly/drunken-wizard');
 
 module.exports = {
   desc: 'Az úton egy láthatóan illuminált állapotban lévő ' + '\x1b[32m' + 'varázsló' + '\x1b[0m' + ' botorkál. Beszélj vele.',

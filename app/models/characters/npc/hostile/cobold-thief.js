@@ -1,6 +1,6 @@
 'use strict';
 
-const knife = require('../../items/knife');
+const knife = require('../../../items/weapons/knife');
 
 module.exports = {
   name: 'kobold',

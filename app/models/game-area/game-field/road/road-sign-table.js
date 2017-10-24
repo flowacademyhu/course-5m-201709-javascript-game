@@ -1,6 +1,6 @@
 'use strict';
 
-const signTable = require('../../characters/npc/sign-table');
+const signTable = require('../../../characters/npc/friendly/sign-table');
 
 module.exports = {
   desc: 'Egy poros úton állsz. Előtted egy kopott ' + '\x1b[33m' + 'tábla' + '\x1b[0m' + '.',
