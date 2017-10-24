@@ -1,9 +1,9 @@
 'use strict';
 
-const gameArea = require('../../models/game-area/game-field/index');
-const position = require('../../models/game-area/starter-position');
-const hasiTasi = require('../menu/inventory');
-const castle = require('../../models/game-area/game-field/castle');
+const gameArea = require('../../../models/game-area/game-field/index');
+const position = require('../../../models/game-area/starter-position');
+const hasiTasi = require('../../menu/inventory');
+const castle = require('../../../models/game-area/game-field/castle/castle');
 
 module.exports = function (item, matrix) {
   let currentNpc = gameArea[matrix[position[1]][position[0]]].npc;

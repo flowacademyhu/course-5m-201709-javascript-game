@@ -1,9 +1,19 @@
 'use strict';
-const item = './data/items/';
+const item = './app/models/items/';
+const directory = './app/models/items';
 const fs = require('fs');
-let items = fs.readdirSync(item)
-    .filter(file => file !== 'index.js')
-    .map(file => require('./' + file))
-    .map(obj => obj.name);
+let directories = fs.readdirSync(directory)
+    .filter(dir => dir !== 'index.js');
 
-module.exports = items;
+let vegleges = [];
+
+for (let i = 0; i < directories.length; i++) {
+  let items = fs.readdirSync(item + directories[i])
+        .map(file => require('./' + directories[i] + '/' + file))
+        .map(obj => obj.name);
+  vegleges = vegleges.concat.apply(vegleges, items);
+}
+
+console.log(vegleges);
+
+module.exports = vegleges;

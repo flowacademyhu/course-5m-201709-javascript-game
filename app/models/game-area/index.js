@@ -1,6 +1,6 @@
 'use strict';
 
-const matrixCurrentPosition = require('./matrix-current-position');
+const matrixCurrentPosition = require('../../../lib/matrix-current-position');
 const position = require('./starter-position');
 const gameArea = require('./game-field/index');
 

@@ -1,9 +1,9 @@
 'use strict';
 
-const gameArea = require('../../models/game-area/game-field/index');
-const position = require('../../models/game-area/starter-position');
-const player = require('../../models/characters/player');
-const random = require('../../../lib/random');
+const gameArea = require('../../../models/game-area/index');
+const position = require('../../../models/game-area/starter-position');
+const player = require('../../../models/characters/player');
+const random = require('./random/random');
 
 module.exports = function (npc, matrix) {
   let n = 1;

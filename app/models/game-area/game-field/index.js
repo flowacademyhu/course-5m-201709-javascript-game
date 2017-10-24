@@ -1,21 +1,20 @@
 'use strict';
-const bridge = require('./bridge');
-const road = require('./road');
-const grassfield = require('./grassfield');
-const river = require('./river');
-const woods = require('./woods');
-const castle = require('./castle');
-const roadDrunkenWizard = require('./road-drunken-wizard');
-const woodWildBoar = require('./woods-wild-boar');
-const roadAxeRobber = require('./road-axe-robber');
-const mountain = require('./mountain');
-const inn1 = require('./inn-1');
-const inn2 = require('./inn-2');
-const cave = require('./cave');
-const caveKey = require('./cave-key');
-const roadSignTable = require('./road-sign-table');
-const roadCoboldThief = require('./road-cobold-thief');
-
+const bridge = require('./bridge/bridge');
+const road = require('./road/road');
+const grassfield = require('./grassfield/grassfield');
+const river = require('./river/river');
+const woods = require('./woods/woods');
+const castle = require('./castle/castle');
+const roadDrunkenWizard = require('./road/road-drunken-wizard');
+const woodWildBoar = require('./woods/woods-wild-boar');
+const roadAxeRobber = require('./road/road-axe-robber');
+const mountain = require('./mountain/mountain');
+const inn1 = require('./inn/inn-1');
+const inn2 = require('./inn/inn-2');
+const cave = require('./cave/cave');
+const caveKey = require('./cave/cave-key');
+const roadSignTable = require('./road/road-sign-table');
+const roadCoboldThief = require('./road/road-cobold-thief');
 
 module.exports = {
   0: woods,         1: woods,  2: woods,  3: woods,               4: woods,       5: woods,       6: woods,       7: roadCoboldThief, 8:  cave,       9:  caveKey,

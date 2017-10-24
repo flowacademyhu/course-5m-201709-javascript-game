@@ -1,5 +1,5 @@
 'use strict';
-const inventory = require('../menu/inventory');
+const inventory = require('../../menu/inventory');
 
 module.exports = function (targetItem) {
   for (let i = 0; i < inventory.inventory.inactiveItems.length; i++) {
