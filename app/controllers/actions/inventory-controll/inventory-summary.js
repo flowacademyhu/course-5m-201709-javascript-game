@@ -1,5 +1,5 @@
 'use strict';
-const hasiTasi = require('../menu/inventory');
+const hasiTasi = require('../../menu/inventory');
 function itemDisplay (items) {
   return items.map(function (item) {
     return item.name;
